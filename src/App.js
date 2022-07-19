@@ -1,4 +1,5 @@
-import { Table, Input, Form, Row, Col } from "antd";
+import { Input, Form, Grid } from "antd-mobile";
+import { Table } from "antd"
 import { React, Component } from "react";
 class App extends Component {
 
@@ -19,20 +20,13 @@ class App extends Component {
     return <>
 
       <Form name="form1">
-        <Row>
-          <Col span={9}>
-            <Form.Item label={"请输入值的区间"} name={"min"}>
-              <Input placeholder={"请输入值"} allowClear onChange={(e) => this.setState({ min: parseFloat(e.target.value) })} />
-            </Form.Item>
-          </Col>
-          <Col span={3}></Col>
-          <Col span={9}>
-            <Form.Item name={"max"}>
-              <Input placeholder={"请输入值"} allowClear onChange={(e) => this.setState({ max: parseFloat(e.target.value) })} />
-            </Form.Item>
-          </Col>
-          <Col span={3}></Col>
-        </Row>
+        <Form.Header>黄金分割率</Form.Header>
+        <Form.Item label={"请输入值的区间"} name={"min"}>
+          <Input placeholder={"请输入值"} allowClear onChange={(min) => this.setState({ min: parseFloat(min) })} />
+        </Form.Item>
+        <Form.Item name={"max"}>
+          <Input placeholder={"请输入值"} allowClear onChange={(max) => this.setState({ max: parseFloat(max) })} />
+        </Form.Item>
       </Form>
 
 

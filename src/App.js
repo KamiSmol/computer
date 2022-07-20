@@ -19,7 +19,7 @@ class App extends Component {
       key: "result",
       dataIndex: "result"
     }]
-    return <>
+    return <div style={{background: '#ace0ff'}}>
       <Form name="form" ref={this.form} layout={"horizontal"}>
         <Form.Header>黄金分割率</Form.Header>
         <Form.Item label={"请输入A点"} name={"min"}>
@@ -42,7 +42,7 @@ class App extends Component {
         </Form.Item>
       </Form>
       <Table pagination={false} columns={colunms} dataSource={[{ key: 1, SpcVal: 0.809, result: this.compute(0.809) }, { key: 2, SpcVal: 0.618, result: this.compute(0.618) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.382, result: this.compute(0.382) }, { key: 5, SpcVal: 0.236, result: this.compute(0.236) }]} />
-    </>
+    </div>
   }
 
   compute = (num) => {
@@ -55,7 +55,7 @@ class App extends Component {
     let result = num * (max - min) + min;
     return Math.round(result * 100) / 100;
   }
-  
+
 }
 
 export default App;

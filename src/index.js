@@ -3,26 +3,11 @@ import ReactDOM from 'react-dom/client';
 import 'antd/dist/antd.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { SafeArea, TextArea } from 'antd-mobile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <>
-      <div style={{ background: '#fff' }}>
-        <SafeArea position={"top"} />
-      </div>
-      <App />
-    </> */}
-    <div>
-      <div style={{ background: '#ace0ff' }}>
-        <SafeArea position='top' />
-      </div>
-      <div><App /></div>
-      <div style={{ background: '#ffcfac' }}>
-        <SafeArea position='bottom' />
-      </div>
-    </div>
+    <App />
   </React.StrictMode>
 );
 

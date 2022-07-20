@@ -8,12 +8,21 @@ import { SafeArea } from 'antd-mobile';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <>
+    {/* <>
       <div style={{ background: '#fff' }}>
         <SafeArea position={"top"} />
       </div>
       <App />
-    </>
+    </> */}
+    <div>
+      <div style={{ background: '#ace0ff' }}>
+        <SafeArea position='top' />
+      </div>
+      <div><Text>673489274289</Text></div>
+      <div style={{ background: '#ffcfac' }}>
+        <SafeArea position='bottom' />
+      </div>
+    </div>
   </React.StrictMode>
 );
 

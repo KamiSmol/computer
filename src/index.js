@@ -18,7 +18,7 @@ root.render(
       <div style={{ background: '#ace0ff' }}>
         <SafeArea position='top' />
       </div>
-      <div><TextArea></TextArea></div>
+      <div><App /></div>
       <div style={{ background: '#ffcfac' }}>
         <SafeArea position='bottom' />
       </div>

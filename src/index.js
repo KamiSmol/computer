@@ -8,8 +8,11 @@ import { SafeArea } from 'antd-mobile';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<SafeArea position={"top"} />
+    <>
+    <SafeArea position={"top"} />
 <App />
+    </>
+
 
     
     

@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import 'antd/dist/antd.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { SafeArea } from 'antd-mobile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+<SafeArea position={"top"} />
+<App />
+
+    
+    
   </React.StrictMode>
 );
 

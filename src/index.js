@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import 'antd/dist/antd.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { SafeArea } from 'antd-mobile';
+import { SafeArea, TextArea } from 'antd-mobile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +18,7 @@ root.render(
       <div style={{ background: '#ace0ff' }}>
         <SafeArea position='top' />
       </div>
-      <div><Text>673489274289</Text></div>
+      <div><TextArea></TextArea></div>
       <div style={{ background: '#ffcfac' }}>
         <SafeArea position='bottom' />
       </div>

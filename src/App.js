@@ -3,8 +3,8 @@ import { Table } from "antd"
 import { React, Component, createRef } from "react";
 class App extends Component {
   state = {
-    min: 0,
-    max: 0
+    min: "",
+    max: ""
   }
 
   form = createRef()

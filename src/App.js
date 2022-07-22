@@ -42,13 +42,8 @@ class App extends Component {
           }} />
         </Form.Item>
       </Form>
-<<<<<<< HEAD
       <Table pagination={false} columns={colunms} dataSource={[{ key: 1, SpcVal: 0.809, result: this.compute(0.809) }, { key: 2, SpcVal: 0.618, result: this.compute(0.618) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.382, result: this.compute(0.382) }, { key: 5, SpcVal: 0.236, result: this.compute(0.236) }]} />
     </div>
-=======
-      <Table pagination={false} columns={colunms} dataSource={[{ key: 1, SpcVal: 0.809, result: this.compute(0.809) }, { key: 2, SpcVal: 0.618, result: this.compute(0.618) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.382, result: this.compute(0.382) }, { key: 5, SpcVal: 0.191, result: this.compute(0.191) }]} />
-    </>
->>>>>>> 58e6c03992ea1950791dabde2282c342d0d8d071
   }
 
   compute = (num) => {

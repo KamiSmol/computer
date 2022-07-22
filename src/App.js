@@ -1,6 +1,7 @@
 import { Input, Form } from "antd-mobile";
 import { Table } from "antd"
 import { React, Component, createRef } from "react";
+import styles from './styles.less';
 class App extends Component {
   state = {
     min: 0,
@@ -19,7 +20,7 @@ class App extends Component {
       key: "result",
       dataIndex: "result"
     }]
-    return <>
+    return <div className={styles.container}>
       <Form name="form" ref={this.form} layout={"horizontal"}>
         <Form.Header>黄金分割率</Form.Header>
         <Form.Item label={"请输入A点"} name={"min"}>
@@ -42,7 +43,7 @@ class App extends Component {
         </Form.Item>
       </Form>
       <Table pagination={false} columns={colunms} dataSource={[{ key: 1, SpcVal: 0.809, result: this.compute(0.809) }, { key: 2, SpcVal: 0.618, result: this.compute(0.618) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.382, result: this.compute(0.382) }, { key: 5, SpcVal: 0.236, result: this.compute(0.236) }]} />
-    </>
+    </div>
   }
 
   compute = (num) => {

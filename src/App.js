@@ -48,7 +48,8 @@ class App extends Component {
 
     compute = (num) => {
         let { max, min } = this.state
-        if (typeof max !== 'number' || typeof min !== 'number') return ""
+        if (typeof max === 'number' && typeof min === 'number');
+        else return "";
         if (max < min) {
             let mid = max;
             max = min;

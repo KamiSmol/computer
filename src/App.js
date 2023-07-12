@@ -49,9 +49,9 @@ class App extends Component {
     }
 
     compute = (num) => {
-        let { min, flag } = this.state
-        if (typeof min !== 'number') return ""
-        let result = (1 + flag * num) * min
+        let { point, flag } = this.state
+        if (typeof point !== 'number') return ""
+        let result = (1 + flag * num) * point
         return Math.round(result * 100) / 100
     }
 

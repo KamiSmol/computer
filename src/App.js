@@ -33,14 +33,14 @@ class App extends Component {
                         })
                     }} />
                 </Form.Item>
-    <DemoBlock title='请选择趋势'>
-        <Radio.Group defaultValue={1}>
+        <Form.Item label={"请选择趋势"} name={"flag"}>
+    <Radio.Group defaultValue={1}>
           <Space direction='vertical'>
             <Radio value={1}>上升</Radio>
             <Radio value={-1}>下降</Radio>
           </Space>
         </Radio.Group>
-      </DemoBlock>
+    </Form.Item>
             </Form>
             <Table pagination={false} columns={colunms} dataSource={[{ key: 1, SpcVal: 0.809, result: this.compute(0.809) }, { key: 2, SpcVal: 0.618, result: this.compute(0.618) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.382, result: this.compute(0.382) }, { key: 5, SpcVal: 0.236, result: this.compute(0.236) }]} />
         </div>

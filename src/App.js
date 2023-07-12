@@ -34,8 +34,10 @@ class App extends Component {
                     }} />
                 </Form.Item>
         <Form.Item label={"请选择趋势"} name={"flag"}>
-    <Radio.Group defaultValue={1}>
-          <Space direction='vertical'>
+    <Radio.Group defaultValue={1} onChange={(flag) => {
+                        this.setState({ flag:flag  })
+                    }}>
+          <Space direction='horizontal'>
             <Radio value={1}>上升</Radio>
             <Radio value={-1}>下降</Radio>
           </Space>

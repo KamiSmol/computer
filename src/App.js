@@ -44,7 +44,7 @@ class App extends Component {
                     </Radio.Group>
                 </Form.Item>
             </Form>
-            <Table pagination={false} columns={colunms} dataSource={this.state.flag === 1 ? [{ key: 1, SpcVal: 0.236, result: this.compute(0.236) }, { key: 2, SpcVal: 0.382, result: this.compute(0.382) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.618, result: this.compute(0.382) }, { key: 5, SpcVal: 0.809, result: this.compute(0.236) }] : [{ key: 1, SpcVal: 0.809, result: this.compute(0.809) }, { key: 2, SpcVal: 0.618, result: this.compute(0.618) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.382, result: this.compute(0.382) }, { key: 5, SpcVal: 0.236, result: this.compute(0.236) }]} />
+            <Table pagination={false} columns={colunms} dataSource={this.state.flag === 1 ? [{ key: 1, SpcVal: 0.236, result: this.compute(0.236) }, { key: 2, SpcVal: 0.382, result: this.compute(0.382) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.618, result: this.compute(0.618) }, { key: 5, SpcVal: 0.809, result: this.compute(0.809) }] : [{ key: 1, SpcVal: 0.809, result: this.compute(0.809) }, { key: 2, SpcVal: 0.618, result: this.compute(0.618) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.382, result: this.compute(0.382) }, { key: 5, SpcVal: 0.236, result: this.compute(0.236) }]} />
         </div>
     }
 

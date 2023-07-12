@@ -39,7 +39,7 @@ class App extends Component {
     }
 
     compute = (num) => {
-        let { max, min } = this.state
+        let { max, min,flag } = this.state
         if (typeof min !== 'number') return "";
         let result = (1+flag*num) * min;
         return Math.round(result * 100) / 100;

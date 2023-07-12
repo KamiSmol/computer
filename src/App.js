@@ -21,7 +21,7 @@ class App extends Component {
             key: "result",
             dataIndex: "result"
         }]
-        return <div className={styles.container}>
+        return <div>
             <Form name="form" ref={this.form} layout={"horizontal"}>
                 <Form.Header>黄金分割率</Form.Header>
                 <Form.Item label={"请输入A点"} name={"point"}>

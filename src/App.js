@@ -1,7 +1,6 @@
 import { Input, Form, Radio, Space } from "antd-mobile";
 import { Table } from "antd"
 import { React, Component, createRef } from "react";
-// import styles from './styles.less';
 
 class App extends Component {
     state = {
@@ -21,7 +20,8 @@ class App extends Component {
             key: "result",
             dataIndex: "result"
         }]
-        return <div>
+
+        return <div style={{ backgroundColor: "white" }}>
             <Form name="form" ref={this.form} layout={"horizontal"}>
                 <Form.Header>黄金分割率</Form.Header>
                 <Form.Item label={"请输入A点"} name={"point"}>

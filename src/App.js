@@ -33,15 +33,6 @@ class App extends Component {
                         })
                     }} />
                 </Form.Item>
-                // <Form.Item label={"请输入B点"} name={"max"}>
-                //     <Input placeholder={"请输入值"} inputMode={"decimal"} clearable={true} onlyShowClearWhenFocus={false} onChange={(max) => {
-                //         max = max.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, '')
-                //         this.setState({ max: parseFloat(max) })
-                //         this.form.current.setFieldsValue({
-                //             max
-                //         })
-                //     }} />
-                // </Form.Item>
             </Form>
             <Table pagination={false} columns={colunms} dataSource={[{ key: 1, SpcVal: 0.809, result: this.compute(0.809) }, { key: 2, SpcVal: 0.618, result: this.compute(0.618) }, { key: 3, SpcVal: 0.5, result: this.compute(0.5) }, { key: 4, SpcVal: 0.382, result: this.compute(0.382) }, { key: 5, SpcVal: 0.236, result: this.compute(0.236) }]} />
         </div>
@@ -50,11 +41,6 @@ class App extends Component {
     compute = (num) => {
         let { max, min } = this.state
         if (typeof min !== 'number') return "";
-        // if (max < min) {
-        //     let mid = max;
-        //     max = min;
-        //     min = mid
-        // }
         let result = (1+flag*num) * min;
         return Math.round(result * 100) / 100;
     }

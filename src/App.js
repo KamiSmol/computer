@@ -61,6 +61,7 @@ class App extends Component {
     compute = (num) => {
         let { min, max, flag } = this.state
         if (typeof min !== 'number' && typeof max !== 'number') return ""
+        console.log(min,max)
         let result = flag === 1 ? min : max + flag * num * (max - min)
         return Math.round(result * 100) / 100
     }

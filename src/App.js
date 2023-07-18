@@ -25,7 +25,7 @@ class App extends Component {
         return <div style={{ backgroundColor: "white" }}>
             <Form name="form" ref={this.form} layout={"horizontal"}>
                 <Form.Header>黄金分割率</Form.Header>
-                <Form.Item label={"请输入最低点"} name={"min"}>
+                <Form.Item label={"请输入低点"} name={"min"}>
                     <Input placeholder={"请输入值"} inputMode={"decimal"} clearable={true} onlyShowClearWhenFocus={false} onChange={(min) => {
                         min = min.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, '')
                         this.setState({ min: parseFloat(min) })
@@ -34,7 +34,7 @@ class App extends Component {
                         })
                     }} />
                 </Form.Item>
-                <Form.Item label={"请输入最高点"} name={"max"}>
+                <Form.Item label={"请输入高点"} name={"max"}>
                     <Input placeholder={"请输入值"} inputMode={"decimal"} clearable={true} onlyShowClearWhenFocus={false} onChange={(max) => {
                         max = max.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, '')
                         this.setState({ max: parseFloat(max) })

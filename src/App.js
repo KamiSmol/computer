@@ -4,7 +4,8 @@ import { React, Component, createRef } from "react";
 
 class App extends Component {
     state = {
-        point: "",
+        min: "",
+        max: "",
         flag: 1
     }
 
@@ -24,12 +25,21 @@ class App extends Component {
         return <div style={{ backgroundColor: "white" }}>
             <Form name="form" ref={this.form} layout={"horizontal"}>
                 <Form.Header>黄金分割率</Form.Header>
-                <Form.Item label={"请输入A点"} name={"point"}>
-                    <Input placeholder={"请输入值"} inputMode={"decimal"} clearable={true} onlyShowClearWhenFocus={false} onChange={(point) => {
-                        point = point.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, '')
-                        this.setState({ point: parseFloat(point) })
+                <Form.Item label={"请输入最低点"} name={"min"}>
+                    <Input placeholder={"请输入值"} inputMode={"decimal"} clearable={true} onlyShowClearWhenFocus={false} onChange={(min) => {
+                        min = min.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, '')
+                        this.setState({ min: parseFloat(min) })
                         this.form.current.setFieldsValue({
-                            point
+                            min
+                        })
+                    }} />
+                </Form.Item>
+                <Form.Item label={"请输入最高点"} name={"max"}>
+                    <Input placeholder={"请输入值"} inputMode={"decimal"} clearable={true} onlyShowClearWhenFocus={false} onChange={(max) => {
+                        max = max.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, '')
+                        this.setState({ max: parseFloat(max) })
+                        this.form.current.setFieldsValue({
+                            max
                         })
                     }} />
                 </Form.Item>
@@ -49,9 +59,9 @@ class App extends Component {
     }
 
     compute = (num) => {
-        let { point, flag } = this.state
-        if (typeof point !== 'number') return ""
-        let result = (1 + flag * num) * point
+        let { min, max, flag } = this.state
+        if (typeof min !== 'number' && typeof max !== 'number') return ""
+        let result = flag === 1 ? min : max + flag * num * (max - min)
         return Math.round(result * 100) / 100
     }
 
